@@ -27,11 +27,31 @@ while true
 
   prize = 0
 
-  x = rand(0..5)
-  y = rand(0..5)
-  z = rand(0..5)
+  (0..5).each do |i|
+    print "#{i}\r"
+    sleep 0.1
+  end
 
-  puts "The combination: #{x}-#{y}-#{z}"
+  x = rand(0..5)
+  print "#{x}\r"
+
+  (0..5).each do |i|
+    print "#{x}-#{i}\r"
+    sleep 0.1
+  end
+
+  y = rand(0..5)
+  print "#{x}-#{y}\r"
+
+  (0..5).each do |i|
+    print "#{x}-#{y}-#{i}\r"
+    sleep 0.1
+  end
+
+  z = rand(0..5)
+  print "#{x}-#{y}-#{z}"
+
+  puts
 
   case "#{x}#{y}#{z}"
   when '000'
