@@ -51,13 +51,13 @@ while true
   end
 
   if prize >= 0
-    puts "You have earned #{prize} dollars."
+    puts "You have earned #{prize} dollar(s)."
   else
-    puts "You lost #{prize} dollars."
+    puts "You lost #{prize.abs} dollar(s)."
   end
 
   money += prize
 
-  puts "Balance: #{money} dollars."
+  puts "Balance: #{money} dollar(s)."
   puts
 end
