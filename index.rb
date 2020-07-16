@@ -1,14 +1,15 @@
 puts 'Welcome to Slot Machine!'
-print 'How old are you: '
+print 'Please enter your age: '
 age = gets.to_i
 
 if age < 18
-  puts 'You are very young.'
+  puts 'Sorry, but you are very young for this game.'
   exit
 end
 
 print 'Do you want to play? (Y/N) '
 play = gets.strip.upcase
+puts
 
 if play != 'Y'
   exit
@@ -58,4 +59,5 @@ while true
   money += prize
 
   puts "Balance: #{money} dollars."
+  puts
 end
