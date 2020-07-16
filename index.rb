@@ -32,23 +32,22 @@ while true
 
   puts "The combination: #{x}-#{y}-#{z}"
 
-  # 000
-  prize = -money if [x, y, z].all?(0)
-
-  # 111
-  prize = 10 if [x, y, z].all?(1)
-
-  # 222
-  prize = 20 if [x, y, z].all?(2)
-
-  # 333
-  prize = 30 if [x, y, z].all?(3)
-
-  # 444
-  prize = 40 if [x, y, z].all?(4)
-
-  # 555
-  prize = 50 if [x, y, z].all?(5)
+  case [x, y, z].to_s
+  when '[0, 0, 0]'
+    prize = -money
+  when '[1, 1, 1]'
+    prize = 10
+  when '[2, 2, 2]'
+    prize = 20
+  when '[3, 3, 3]'
+    prize = 30
+  when '[4, 4, 4]'
+    prize = 40
+  when '[5, 5, 5]'
+    prize = 50
+  else
+    prize = -1
+  end
 
   if prize >= 0
     puts "You have earned #{prize} dollars."
