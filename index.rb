@@ -33,18 +33,18 @@ while true
 
   puts "The combination: #{x}-#{y}-#{z}"
 
-  case [x, y, z].to_s
-  when '[0, 0, 0]'
+  case "#{x}#{y}#{z}"
+  when '000'
     prize = -money
-  when '[1, 1, 1]'
+  when '111'
     prize = 10
-  when '[2, 2, 2]'
+  when '222'
     prize = 20
-  when '[3, 3, 3]'
+  when '333'
     prize = 30
-  when '[4, 4, 4]'
+  when '444'
     prize = 40
-  when '[5, 5, 5]'
+  when '555'
     prize = 50
   else
     prize = -1
