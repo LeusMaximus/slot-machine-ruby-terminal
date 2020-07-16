@@ -21,34 +21,36 @@ puts "Ok let's play."
 puts "Your starting balance: #{money} dollars."
 puts
 
+values_range = 0..5
+
 while true
   print "Press enter to start machine... "
   gets
 
   prize = 0
 
-  (0..5).each do |i|
+  values_range.each do |i|
     print "#{i}\r"
     sleep 0.1
   end
 
-  x = rand(0..5)
+  x = rand(values_range)
   print "#{x}\r"
 
-  (0..5).each do |i|
+  values_range.each do |i|
     print "#{x}-#{i}\r"
     sleep 0.1
   end
 
-  y = rand(0..5)
+  y = rand(values_range)
   print "#{x}-#{y}\r"
 
-  (0..5).each do |i|
+  values_range.each do |i|
     print "#{x}-#{y}-#{i}\r"
     sleep 0.1
   end
 
-  z = rand(0..5)
+  z = rand(values_range)
   print "#{x}-#{y}-#{z}"
 
   puts
