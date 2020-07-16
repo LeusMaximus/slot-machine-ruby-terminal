@@ -33,42 +33,30 @@ while true
   puts "The combination: #{x}-#{y}-#{z}"
 
   # 000
-  if x == 0 && y == 0 && z == 0
-    prize = -money
-  end
+  prize = -money if [x, y, z].all?(0)
 
   # 111
-  if x == 1 && y == 1 && z == 1
-    prize = 10
-  end
+  prize = 10 if [x, y, z].all?(1)
 
   # 222
-  if x == 2 && y == 2 && z == 2
-    prize = 20
-  end
+  prize = 20 if [x, y, z].all?(2)
 
   # 333
-  if x == 3 && y == 3 && z == 3
-    prize = 30
-  end
+  prize = 30 if [x, y, z].all?(3)
 
   # 444
-  if x == 4 && y == 4 && z == 4
-    prize = 40
-  end
+  prize = 40 if [x, y, z].all?(4)
 
   # 555
-  if x == 5 && y == 5 && z == 5
-    prize = 50
-  end
-
-  money += prize
+  prize = 50 if [x, y, z].all?(5)
 
   if prize >= 0
     puts "You have earned #{prize} dollars."
   else
     puts "You lost #{prize} dollars."
   end
+
+  money += prize
 
   puts "Balance: #{money} dollars."
 end
